@@ -1,15 +1,16 @@
-//your JS code here. If required.
-let modal = document.getElementById("modal");
+const openBtn = document.getElementById("openModal");
+const modal = document.querySelector(".modal");
+const closeBtn = document.querySelector(".close-modal");
 
-document.getElementById("openBtn").onclick = function () {
+openBtn.onclick = function () {
   modal.style.display = "block";
 };
 
-document.getElementById("closeBtn").onclick = function () {
+closeBtn.onclick = function () {
   modal.style.display = "none";
 };
 
-window.onclick = function (e) {
+modal.onclick = function (e) {
   if (e.target === modal) {
     modal.style.display = "none";
   }
